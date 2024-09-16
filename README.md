@@ -1,62 +1,73 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/AHFn7Vbn)
-# Superjoin Hiring Assignment
+Superjoin Hiring Assignment🚀
 
-### Welcome to Superjoin's hiring assignment! 🚀
+## Overview
+This project is designed to enable real-time synchronization between Google Sheets and a MySQL database. It uses Django as the web framework and integrates with Google Sheets API to automate the synchronization process. The system ensures that any changes made in Google Sheets are reflected in the database and vice versa.
 
-### Objective
-Build a solution that enables real-time synchronization of data between a Google Sheet and a specified database (e.g., MySQL, PostgreSQL). The solution should detect changes in the Google Sheet and update the database accordingly, and vice versa.
+##Technologies Used
+-Django: Web framework for building the web application.
+-MySQL: Database used for storing and managing data.
+-Google Sheets API: Used to interact with Google Sheets for data synchronization.
+-Webhooks: To handle real-time updates between the database and Google Sheets.
+-Bootstrap: For styling the web pages.
 
-### Problem Statement
-Many businesses use Google Sheets for collaborative data management and databases for more robust and scalable data storage. However, keeping the data synchronised between Google Sheets and databases is often a manual and error-prone process. Your task is to develop a solution that automates this synchronisation, ensuring that changes in one are reflected in the other in real-time.
+## Features
+1.Real-Time Synchronization: Detects changes in Google Sheets and updates the MySQL database accordingly. Similarly, changes in the database are reflected in Google Sheets.
+2.CRUD Operations: Supports Create, Read, Update, and Delete operations for both Google Sheets and the database.
+3.Dynamic Table Creation: Creates a new database table based on the structure of the Google Sheet if it does not exist.
+4.Triggers and Webhooks: Uses MySQL triggers and webhooks to handle real-time synchronization.
 
-### Requirements:
-1. Real-time Synchronisation
-  - Implement a system that detects changes in Google Sheets and updates the database accordingly.
-   - Similarly, detect changes in the database and update the Google Sheet.
-  2.	CRUD Operations
-   - Ensure the system supports Create, Read, Update, and Delete operations for both Google Sheets and the database.
-   - Maintain data consistency across both platforms.
+## Project Setup
+Prerequisites
+-Python 3.8 or higher
+-Django 5.1.1
+-MySQL
+-Google Cloud credentials for Sheets API
+
+##Installation
+1.Clone the Repository
+   -git clone https://github.com/your-repo-url.git
+   -cd your-repo-folder
+
+2.Create a Virtual Environment
+   -python -m venv env
+   -source env/bin/activate  # On Windows use `env\Scripts\activate`
    
-### Optional Challenges (This is not mandatory):
-1. Conflict Handling
-- Develop a strategy to handle conflicts that may arise when changes are made simultaneously in both Google Sheets and the database.
-- Provide options for conflict resolution (e.g., last write wins, user-defined rules).
-    
-2. Scalability: 	
-- Ensure the solution can handle large datasets and high-frequency updates without performance degradation.
-- Optimize for scalability and efficiency.
+3.Install Dependencies
+   -pip install -r requirements.txt
+   
+4.Configure Google Sheets API
+   -Place your credentials.json file in the google_credentials directory.
+   -Ensure the Google Sheets API is enabled in your Google Cloud project.
+   
+5.Update Settings
+   -Edit settings.py to configure your MySQL database connection details.
+   
+6.Apply Migrations
+   -python manage.py migrate
+   
+7.Run the Development Server
+   -python manage.py runserver
+   
+## Usage
+1.Sync Google Sheet
+   -Navigate to http://localhost:8000/sync-google-sheet/.
+   -Enter the Google Sheet ID and submit the form to synchronize the Google Sheet with the database.
+   
+2.Update Google Sheet
+   -After synchronization, you can update the Google Sheet by clicking the "Update Database" button on the confirmation page.
+   
+## Files Overview
+-google_sheet_sync_complete.html: Template displayed after successful synchronization with options to open the Google Sheet and update the database.
+-sync_sheet.html: Form to enter the Google Sheet ID for synchronization.
+-google_setting.py: Contains functions to authenticate and interact with Google Sheets API.
+-google_sheet.py: Handles communication with the Google Sheets API, including fetching data from a Google Sheet and pushing updates to it.
+-settings.py: Django settings file, including database configurations and Google Sheets credentials path.
+-google_setting.py: Contains functions to authenticate and interact with Google Sheets API.
+-credentials.json:
+   -Purpose: Stores the OAuth 2.0 credentials required to authenticate with Google APIs.
+   -Contents: Includes client_id, client_secret, and other necessary tokens for API access, generated via the Google Cloud Console.
+-urls.py: URL configuration for the Django project, defining routes for synchronization and update operations.
+-views.py: Contains the logic for synchronizing Google Sheets with the database, creating tables, and handling webhooks for real-time updates.
 
-## Submission ⏰
-The timeline for this submission is: **Next 2 days**
-
-Some things you might want to take care of:
-- Make use of git and commit your steps!
-- Use good coding practices.
-- Write beautiful and readable code. Well-written code is nothing less than a work of art.
-- Use semantic variable naming.
-- Your code should be organized well in files and folders which is easy to figure out.
-- If there is something happening in your code that is not very intuitive, add some comments.
-- Add to this README at the bottom explaining your approach (brownie points 😋)
-- Use ChatGPT4o/o1/Github Co-pilot, anything that accelerates how you work 💪🏽. 
-
-Make sure you finish the assignment a little earlier than this so you have time to make any final changes.
-
-Once you're done, make sure you **record a video** showing your project working. The video should **NOT** be longer than 120 seconds. While you record the video, tell us about your biggest blocker, and how you overcame it! Don't be shy, talk us through, we'd love that.
-
-We have a checklist at the bottom of this README file, which you should update as your progress with your assignment. It will help us evaluate your project.
-
-- [ ] My code's working just fine! 🥳
-- [ ] I have recorded a video showing it working and embedded it in the README ▶️
-- [ ] I have tested all the normal working cases 😎
-- [ ] I have even solved some edge cases (brownie points) 💪
-- [ ] I added my very planned-out approach to the problem at the end of this README 📜
-
-## Got Questions❓
-Feel free to check the discussions tab, you might get some help there. Check out that tab before reaching out to us. Also, did you know, the internet is a great place to explore? 😛
-
-We're available at techhiring@superjoin.ai for all queries. 
-
-All the best ✨.
-
-## Developer's Section
-*Add your video here, and your approach to the problem (optional). Leave some comments for us here if you want, we will be reading this :)*
+## Contributing
+Feel free to fork the repository and submit pull requests for improvements or bug fixes. If you have any questions or issues, please open an issue on GitHub.
