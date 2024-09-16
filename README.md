@@ -3,12 +3,12 @@ Superjoin Hiring Assignment🚀
 ## Overview
 This project is designed to enable real-time synchronization between Google Sheets and a MySQL database. It uses Django as the web framework and integrates with Google Sheets API to automate the synchronization process. The system ensures that any changes made in Google Sheets are reflected in the database and vice versa.
 
-##Technologies Used
--Django: Web framework for building the web application.
--MySQL: Database used for storing and managing data.
--Google Sheets API: Used to interact with Google Sheets for data synchronization.
--Webhooks: To handle real-time updates between the database and Google Sheets.
--Bootstrap: For styling the web pages.
+## Technologies Used
+- Django: Web framework for building the web application.
+- MySQL: Database used for storing and managing data.
+- Google Sheets API: Used to interact with Google Sheets for data synchronization.
+- Webhooks: To handle real-time updates between the database and Google Sheets.
+- Bootstrap: For styling the web pages.
 
 ## Features
 1.Real-Time Synchronization: Detects changes in Google Sheets and updates the MySQL database accordingly. Similarly, changes in the database are reflected in Google Sheets.
@@ -18,12 +18,12 @@ This project is designed to enable real-time synchronization between Google Shee
 
 ## Project Setup
 Prerequisites
--Python 3.8 or higher
--Django 5.1.1
--MySQL
--Google Cloud credentials for Sheets API
+- Python 3.8 or higher
+- Django 5.1.1
+- MySQL
+- Google Cloud credentials for Sheets API
 
-##Installation
+## Installation
 1.Clone the Repository
    -git clone https://github.com/your-repo-url.git
    -cd your-repo-folder
@@ -57,17 +57,17 @@ Prerequisites
    -After synchronization, you can update the Google Sheet by clicking the "Update Database" button on the confirmation page.
    
 ## Files Overview
--google_sheet_sync_complete.html: Template displayed after successful synchronization with options to open the Google Sheet and update the database.
--sync_sheet.html: Form to enter the Google Sheet ID for synchronization.
--google_setting.py: Contains functions to authenticate and interact with Google Sheets API.
--google_sheet.py: Handles communication with the Google Sheets API, including fetching data from a Google Sheet and pushing updates to it.
--settings.py: Django settings file, including database configurations and Google Sheets credentials path.
--google_setting.py: Contains functions to authenticate and interact with Google Sheets API.
--credentials.json:
-   -Purpose: Stores the OAuth 2.0 credentials required to authenticate with Google APIs.
-   -Contents: Includes client_id, client_secret, and other necessary tokens for API access, generated via the Google Cloud Console.
--urls.py: URL configuration for the Django project, defining routes for synchronization and update operations.
--views.py: Contains the logic for synchronizing Google Sheets with the database, creating tables, and handling webhooks for real-time updates.
+- google_sheet_sync_complete.html: Template displayed after successful synchronization with options to open the Google Sheet and update the database.
+- sync_sheet.html: Form to enter the Google Sheet ID for synchronization.
+- google_setting.py: Contains functions to authenticate and interact with Google Sheets API.
+- google_sheet.py: Handles communication with the Google Sheets API, including fetching data from a Google Sheet and pushing updates to it.
+- settings.py: Django settings file, including database configurations and Google Sheets credentials path.
+- google_setting.py: Contains functions to authenticate and interact with Google Sheets API.
+- credentials.json:
+   - Purpose: Stores the OAuth 2.0 credentials required to authenticate with Google APIs.
+   - Contents: Includes client_id, client_secret, and other necessary tokens for API access, generated via the Google Cloud Console.
+- urls.py: URL configuration for the Django project, defining routes for synchronization and update operations.
+- views.py: Contains the logic for synchronizing Google Sheets with the database, creating tables, and handling webhooks for real-time updates.
 
 ## Contributing
 Feel free to fork the repository and submit pull requests for improvements or bug fixes. If you have any questions or issues, please open an issue on GitHub.
