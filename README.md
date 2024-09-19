@@ -11,10 +11,10 @@ This project is designed to enable real-time synchronization between Google Shee
 - Bootstrap: For styling the web pages.
 
 ## Features
-1.Real-Time Synchronization: Detects changes in Google Sheets and updates the MySQL database accordingly. Similarly, changes in the database are reflected in Google Sheets.
-2.CRUD Operations: Supports Create, Read, Update, and Delete operations for both Google Sheets and the database.
-3.Dynamic Table Creation: Creates a new database table based on the structure of the Google Sheet if it does not exist.
-4.Triggers and Webhooks: Uses MySQL triggers and webhooks to handle real-time synchronization.
+1. Real-Time Synchronization: Detects changes in Google Sheets and updates the MySQL database accordingly. Similarly, changes in the database are reflected in Google Sheets.
+2. CRUD Operations: Supports Create, Read, Update, and Delete operations for both Google Sheets and the database.
+3. Dynamic Table Creation: Creates a new database table based on the structure of the Google Sheet if it does not exist.
+4. Triggers and Webhooks: Uses MySQL triggers and webhooks to handle real-time synchronization.
 
 ## Project Setup
 Prerequisites
